@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>minecraft for dragons</title>
+
+        <script>
+            const copyable = document.getElementsByClassName("copyable");
+
+            copyable.onclick = function() {
+                document.execCommand("copy");
+            }
+
+            copyable.addEventListener("copy", function(event) {
+                event.preventDefault();
+                if (event.clipboardData) {
+                    event.clipboardData.setData("text/plain", copyable.textContent);
+                    console.log(event.clipboardData.getData("text"))
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <p>all of the minecraft server stuff FantasyDragon14 is working/has worked on will go here.
+            <br><br>
+            if you cannot connect to the server with the minecraft.fantasydragon.xyz address, it's likely your router is too old or you have a shitty antiVirus >:3c (or smth else that prevents reading SRV dns records, i dunno). <br>
+             until you figure it out, you can use this domain: 
+            <span class="copyable"><i>freefantasycraft.ddns.net</i></span>
+        </p>
+    </body>
+</html>
