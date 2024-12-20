@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>minecraft for dragons</title>
+        <title>FantasyDragon hosted Servers</title>
 
         <script>
-            const copyable = document.getElementsByClassName("copyable");
-
-            copyable.onclick = function() {
-                document.execCommand("copy");
+            function CopyToClipboard(id)
+            {
+            var r = document.createRange();
+            r.selectNode(document.getElementById(id));
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(r);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
             }
-
-            copyable.addEventListener("copy", function(event) {
-                event.preventDefault();
-                if (event.clipboardData) {
-                    event.clipboardData.setData("text/plain", copyable.textContent);
-                    console.log(event.clipboardData.getData("text"))
-                }
-            });
         </script>
+        <style>
+            .ip {
+                color: green;
+            }
+        </style>
+
     </head>
     <body>
+        <nav>
+            <a href="/">Home</a> | <a href="/server/">Server</a> | <a href="/modpacks/">Modpacks</a> | <a href="/modding/">Modding</a>
+        </nav>
         <p>all of the minecraft server stuff FantasyDragon14 is working/has worked on will go here.
-            <br><br>
-            if you cannot connect to the server with the minecraft.fantasydragon.xyz address, it's likely your router is too old or you have a shitty antiVirus >:3c (or smth else that prevents reading SRV dns records, i dunno). <br>
-             until you figure it out, you can use this domain: 
-            <span class="copyable"><i>freefantasycraft.ddns.net</i></span>
+            <br>
+            <ul>Servers:
+                <li>
+                    FreeFantasyCraft SMP <br>
+                    ip: <a id="ip1" class="ip" href="" onclick="CopyToClipboard('ip1');return false;">minecraft.fantasydragon.xyz <small>(click to copy)</small></a><br>
+                    The Server is currently hosting <a href="https://modrinth.com/modpack/ffc-modded-smp-season-1"><strong>this modpack</strong> </a> (modrinth link)
+                    <br>
+                    if you cannot connect to the server with the minecraft.fantasydragon.xyz address, it's likely your router is too old or you have a shitty antiVirus &gt;:3c (or smth else that prevents reading SRV dns records, i dunno). <br>
+                    until you figure it out, you can use this domain: 
+                    <a id="ip2" class="ip" href="" onclick="CopyToClipboard('ip2');return false;">freefantasycraft.ddns.net <small>(click to copy)</small></a> 
+                </li>
+            </ul>
+            <br> 
         </p>
     </body>
 </html>
