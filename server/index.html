@@ -3,6 +3,8 @@
     <head>
         <title>FantasyDragon hosted Servers</title>
 
+        <link href="style.css" rel="stylesheet" type="text/css" media="all">
+
         <script>
             function CopyToClipboard(id)
             {
@@ -14,31 +16,53 @@
             window.getSelection().removeAllRanges();
             }
         </script>
-        <style>
-            .ip {
-                color: green;
-            }
-        </style>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="serverstatus.js"></script>
 
     </head>
     <body>
         <nav>
-            <a href="/">Home</a> | <a href="/server/">Server</a> | <a href="/modpacks/">Modpacks</a> | <a href="/modding/">Modding</a>
+            <a href="/">Home</a> | <a href="/server/">Server</a> | <a
+                href="/modpacks/">Modpacks</a> | <a href="/modding/">Modding</a>
         </nav>
-        <p>all of the minecraft server stuff FantasyDragon14 is working/has worked on will go here.
+        <p>all of the minecraft server stuff FantasyDragon14 is working/has
+            worked on will go here.
             <br>
             <ul>Servers:
                 <li>
-                    FreeFantasyCraft SMP <br>
-                    ip: <a id="ip1" class="ip" href="" onclick="CopyToClipboard('ip1');return false;">minecraft.fantasydragon.xyz <small>(click to copy)</small></a><br>
-                    The Server is currently hosting <a href="https://modrinth.com/modpack/ffc-modded-smp-season-1"><strong>this modpack</strong> </a> (modrinth link)
+                    <div id="widget">
+                        <div ><img id="favicon"
+                                style="text-align: center;"></div>
+                        <div>
+                            <b><u>FreeFantasyCraft SMP</u></b><br>
+                            ip: <a class="ip" href
+                                onclick="CopyToClipboard('ip1');return false;"><span id="ip1" >minecraft.fantasydragon.xyz</span><span
+                                    class="tooltiptext">click to
+                                    copy</span></a><br>
+                            <b>Serverstatus: </b><span id="status">loading...</span><br>
+                            <b>current players: </b><span id="players">loading...</span><br>
+                            <b>Modpack:</b> <a
+                                href="https://modrinth.com/modpack/ffc-modded-smp-season-1">FFC-modded-SMP</a><small>(modrinth)</small>
+                        </div>
+                    </div>
+
+                    The Server is currently hosting <a
+                        href="https://modrinth.com/modpack/ffc-modded-smp-season-1"><strong>this
+                            modpack</strong> </a> (modrinth link)
                     <br>
-                    if you cannot connect to the server with the minecraft.fantasydragon.xyz address, it's likely your router is too old or you have a shitty antiVirus &gt;:3c (or smth else that prevents reading SRV dns records, i dunno). <br>
-                    until you figure it out, you can use this domain: 
-                    <a id="ip2" class="ip" href="" onclick="CopyToClipboard('ip2');return false;">freefantasycraft.ddns.net <small>(click to copy)</small></a> 
+                    if you cannot connect to the server with the
+                    minecraft.fantasydragon.xyz address, it's likely your router
+                    is too old or you have a shitty antiVirus &gt;:3c (or smth
+                    else that prevents reading SRV dns records, i dunno). <br>
+                    until you figure it out, you can use this domain:
+                    <a class="ip" href
+                        onclick="CopyToClipboard('ip2');return false;"><span id="ip2">freefantasycraft.ddns.net</span>
+                        <span class="tooltiptext">click to copy</span></a>
                 </li>
             </ul>
-            <br> 
+
+            <br>
         </p>
     </body>
 </html>
