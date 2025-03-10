@@ -12,6 +12,6 @@ setInterval(() => {
                 $('#players').html(+r.players.online)
 
         });
-}, 5000)
+}, 500)
 
 
